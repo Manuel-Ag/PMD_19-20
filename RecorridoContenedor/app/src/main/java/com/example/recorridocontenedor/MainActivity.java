@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
             for (int j = 0; j < tableRow.getChildCount(); j++) {
                 //Como no sabemos el tipo de vista, lo guardo en un tipo View
                 view = tableRow.getChildAt(j);
-                Log.wtf("Prueba", view.toString());
+                Log.i("Prueba", view.toString());
             }
         }
     }
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
         }
 
         //Es posible añadir una quinta fila
-        //Creo un tableRow
+        //Para ello, creo un tableRow
         TableRow tr_head = new TableRow(this);
         //Y lo añado al tableLayout
         tableLayout.addView(tr_head);
