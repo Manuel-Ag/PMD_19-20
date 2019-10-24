@@ -9,6 +9,7 @@ import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -54,8 +55,9 @@ public class MainActivity extends AppCompatActivity {
                 ImageButton button = new ImageButton(this);
                 // Añadimos los parámetros
                 button.setLayoutParams(tableRowLayoutParams);
-                button.setImageResource(R.drawable.ic_launcher_foreground);
-
+                button.setImageResource(R.drawable.ship);
+                button.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                button.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                 tableRow.addView(button);
             }
         }
