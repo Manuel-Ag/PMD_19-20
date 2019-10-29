@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -12,49 +13,82 @@ import androidx.recyclerview.widget.RecyclerView;
  * Ejemplo a seguir: https://stackoverflow.com/questions/40584424/simple-android-recyclerview-example
  */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    private String[] mDataset;
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
-        public TextView textView;
-        public MyViewHolder(View v) {
-            super(v);
-            textView = v.findViewById(R.id.textView); // pequeño cambio respecto a la documentación, debemos de entrar dentro del Layout para acceder al textView
-        }
+    private String[] mDataSet;
+    private ItemClickListener mClickListener;
+
+    /**
+     * Constructor al que le pasamos como parámetro los datos
+     * @param mDataSet
+     */
+    public MyAdapter(String[] mDataSet) {
+        this.mDataSet = mDataSet;
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(String[] myDataset) {
-        mDataset = myDataset;
-    }
-
-    // Create new views (invoked by the layout manager)
+    /**
+     * El layout manager llama a este método
+     * @param parent
+     * @param viewType
+     * @return
+     */
+    @NonNull
     @Override
-    public MyAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
-                                                     int viewType) {
-        // create a new view
-        View v = LayoutInflater.from(parent.getContext())       // Otro pequeño cambio
+    public MyAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.fila, parent, false);
-        //...
+
         MyViewHolder vh = new MyViewHolder(v);
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    /**
+     * Este método reemplaza en contenido de las vistas
+     * @param holder
+     * @param position
+     */
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
-        holder.textView.setText(mDataset[position]);
-
+    public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, int position) {
+        holder.textView.setText(mDataSet[position]);
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mDataSet.length;
+    }
+
+    // convenience method for getting data at click position
+    public String getItem(int pos) {
+        return mDataSet[pos];
+    }
+
+    /**
+     * Aquí utilizamos toas las referencias a las vistas a mostrar en cada fila
+     */
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        TextView textView;
+
+        public MyViewHolder(View v) {
+            super(v);
+            // Debemos tener acceso a las vistas a través de la vista que nos llega (LinearLayout)
+            textView = v.findViewById(R.id.textView);
+            textView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            if (mClickListener != null)
+                mClickListener.onItemClick(view, getAdapterPosition());
+        }
+    }
+
+    // parent activity will implement this method to respond to click events
+    public interface ItemClickListener {
+        void onItemClick(View view, int position);
+    }
+
+    // allows clicks events to be caught
+    void setClickListener(ItemClickListener itemClickListener) {
+        this.mClickListener = itemClickListener;
     }
 }

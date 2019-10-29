@@ -5,15 +5,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 /**
  * Ejemplo a seguir: https://stackoverflow.com/questions/40584424/simple-android-recyclerview-example
  */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MyAdapter.ItemClickListener {
 
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter mAdapter;
+    private MyAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private String[] myDataSet = {"Prueba1", "Prueba2", "Prueba3"};
 
@@ -33,7 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
         // specify an adapter (see also next example)
         mAdapter = new MyAdapter(myDataSet);
+        mAdapter.setClickListener(this);
         recyclerView.setAdapter(mAdapter);
     }
 
+    @Override
+    public void onItemClick(View view, int position) {
+        Log.d("prueba", "You clicked " + mAdapter.getItem(position) + " on row number " + position);
+    }
 }
