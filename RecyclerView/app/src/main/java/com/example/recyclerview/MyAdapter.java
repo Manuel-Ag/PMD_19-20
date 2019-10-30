@@ -8,20 +8,22 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 
 /**
  * Ejemplo a seguir: https://stackoverflow.com/questions/40584424/simple-android-recyclerview-example
  */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    private String[] mDataSet;
+    private ArrayList<String> mDataSet;
     private ItemClickListener mClickListener;
 
     /**
      * Constructor al que le pasamos como parámetro los datos
      * @param mDataSet
      */
-    public MyAdapter(String[] mDataSet) {
+    public MyAdapter(ArrayList<String> mDataSet) {
         this.mDataSet = mDataSet;
     }
 
@@ -49,17 +51,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
      */
     @Override
     public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, int position) {
-        holder.textView.setText(mDataSet[position]);
+        holder.textView.setText(mDataSet.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return mDataSet.length;
+        return mDataSet.size();
     }
 
     // convenience method for getting data at click position
     public String getItem(int pos) {
-        return mDataSet[pos];
+        return mDataSet.get(pos);
     }
 
     /**
