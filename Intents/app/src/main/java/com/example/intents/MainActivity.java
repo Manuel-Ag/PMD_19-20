@@ -99,4 +99,18 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("google.navigation:q=Los+Enlaces,+Zaragoza+España"));
         startActivity(intent);
     }
+
+    public void botonIntentImplicitoEmail(View v) {
+        Intent intent = new Intent();
+        intent.setType("*/*");
+        intent.setData(Uri.parse("mailto:"));
+        intent.setAction(Intent.ACTION_SENDTO);
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"direcasd@gads.com", "adsf@gfas.com"});
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Asunto");
+        intent.putExtra(Intent.EXTRA_STREAM, "Cuerpo");
+
+            startActivity(intent);
+
+
+    }
 }
