@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Tamaño_layout_en_ejecucion'
