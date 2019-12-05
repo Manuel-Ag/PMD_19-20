@@ -51,9 +51,6 @@ public class MainActivity extends AppCompatActivity {
         tarea.cancel(true);
     }
 
-    public synchronized void cambiarTexto(String s) {
-        editText.setText(s);
-    }
 
     // <Parámetros, progreso y resultado> ver: https://stackoverflow.com/questions/6053602/what-arguments-are-passed-into-asynctaskarg1-arg2-arg3
     public class Tarea extends AsyncTask<Integer, Integer, Integer> {
@@ -72,11 +69,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Integer doInBackground(Integer... objects) {
             for (int i = 0; i <= objects[0]; i++) {
-                cambiarTexto(i+"");
-                publishProgress(i*100/objects[0]);
+                publishProgress(i,i*100/objects[0]);
                 SystemClock.sleep(300);
 
-                if (isCancelled()) break;
+                // Si cancelamos salimos del bucle
+                if (isCancelled())
+                    break;
             }
 
             return objects[0];
@@ -87,7 +85,8 @@ public class MainActivity extends AppCompatActivity {
          */
         @Override
         protected void onProgressUpdate(Integer... values) {
-            progressBar.setProgress(values[0]);
+            editText.setText(values[0].toString());
+            progressBar.setProgress(values[1]);
         }
 
         /**
