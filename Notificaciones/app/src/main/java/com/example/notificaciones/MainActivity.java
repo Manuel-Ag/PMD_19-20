@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
     public void notificacionRespuesta(View v) {
 
         RemoteInput remoteInput = new RemoteInput.Builder(KEY_TEXT_REPLY)
-                .setLabel("Etiqueta")
+                .setLabel("Etiqueta1")
                 .build();
 
         // Build a PendingIntent for the reply action to trigger.
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         // Create the reply action and add the remote input.
         NotificationCompat.Action action =
                 new NotificationCompat.Action.Builder(R.drawable.ic_android_black_24dp,
-                        "Etiqueta", pendingIntent)
+                        "Etiqueta2", pendingIntent)
                         .addRemoteInput(remoteInput)
                         .build();
 
