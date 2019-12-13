@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void boton(View v) throws IOException { Resources r = getResources();
-        InputStream inputStream = this.getResources().openRawResource(R.raw.palabras);
+        InputStream inputStream = this.getResources().openRawResource(R.raw.fichero);
         InputStreamReader inputreader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(inputreader);
 
