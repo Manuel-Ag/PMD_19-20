@@ -5,7 +5,6 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.core.app.RemoteInput;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -18,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
     static final String CHANNEL_ID = "ID_CANAL";
     // Key for the string that's delivered in the action's intent.
     private static final String KEY_TEXT_REPLY = "key_text_reply";
+    // Para la notificación con progreso
+    NotificationCompat.Builder builderProgreso;
+    NotificationManagerCompat notificationManagerProgreso;
+    int PROGRESS_MAX = 100;
+    int PROGRESS_CURRENT = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Mostramos la notificación
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-        // notificationId is a unique int for each notification that you must define
+        // La id debe de ser única para cada notificación
         notificationManager.notify(3, builder.build());
     }
 
@@ -96,19 +100,19 @@ public class MainActivity extends AppCompatActivity {
                 .setLabel("Etiqueta1")
                 .build();
 
-        // Build a PendingIntent for the reply action to trigger.
+        // Crea un PendingIntent para la acción de respuesta
         Intent intent = new Intent(this, Main3Activity.class);
-        //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,
                 intent, 0);
 
-        // Create the reply action and add the remote input.
+        // Creamos la acción de respuesta, asignándole el PendingIntent
         NotificationCompat.Action action =
                 new NotificationCompat.Action.Builder(R.drawable.ic_android_black_24dp,
                         "Etiqueta2", pendingIntent)
                         .addRemoteInput(remoteInput)
                         .build();
 
+        // Creamos la notificación
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_android_black_24dp)
                 .setContentTitle("My notification")
@@ -118,13 +122,44 @@ public class MainActivity extends AppCompatActivity {
                 .setAutoCancel(true);
 
 
-        // Issue the notification.
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         notificationManager.notify(4, builder.build());
+    }
 
+    public void notifiacionBarra(View v) {
+        notificationManagerProgreso = NotificationManagerCompat.from(this);
+        builderProgreso = new NotificationCompat.Builder(this, CHANNEL_ID);
+        builderProgreso.setContentTitle("Picture Download")
+                .setContentText("Download in progress")
+                .setSmallIcon(R.drawable.ic_android_black_24dp)
+                .setPriority(NotificationCompat.PRIORITY_LOW);
+
+        // Issue the initial notification with zero progress
+        int PROGRESS_MAX = 100;
+        int PROGRESS_CURRENT = 0;
+        builderProgreso.setProgress(PROGRESS_MAX, PROGRESS_CURRENT, false);
+        notificationManagerProgreso.notify(5, builderProgreso.build());
 
     }
 
+    public void notificacionUp(View v) {
+        // Si estamos por debajo del máximo
+        if (PROGRESS_CURRENT < PROGRESS_MAX) {
+            builderProgreso.setProgress(PROGRESS_MAX, PROGRESS_CURRENT += 10, false);
+            notificationManagerProgreso.notify(5, builderProgreso.build());
+        }
+        // Si llegamos al máximo
+        else {
+            builderProgreso.setContentText("Download complete")
+                    .setProgress(0, 0, false);
+            notificationManagerProgreso.notify(5, builderProgreso.build());
+        }
+    }
+
+    public void notificacionDown(View v) {
+        builderProgreso.setProgress(PROGRESS_MAX, PROGRESS_CURRENT-=10, false);
+        notificationManagerProgreso.notify(5, builderProgreso.build());
+    }
 
     private void createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because

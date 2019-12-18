@@ -49,4 +49,38 @@
         android:text="Respuesta directa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonNotBoton" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:onClick="notifiacionBarra"
+        android:text="Notificación con barra de progreso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRespuesta" />
+
+    <ImageButton
+        android:id="@+id/imageButtonUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:onClick="notificacionUp"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="notificacionDown"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonUp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonUp"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonUp"
+        app:srcCompat="@android:drawable/arrow_down_float" />
 </androidx.constraintlayout.widget.ConstraintLayout>
