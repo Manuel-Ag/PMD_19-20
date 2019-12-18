@@ -30,6 +30,7 @@ public class Main3Activity extends AppCompatActivity {
         // Issue the new notification.
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         notificationManager.notify(4, builder.build());
+        //notificationManager.cancel(4);
 
     }
 

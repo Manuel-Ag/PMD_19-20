@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         // notificationId is a unique int for each notification that you must define
         notificationManager.notify(1, builder.build());
-
-
     }
 
     public void notificacionAccionToque(View v) {
@@ -67,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
         // notificationId is a unique int for each notification that you must define
         notificationManager.notify(2, builder.build());
     }
-
 
     public void notificacionBoton(View v) {
         Intent snoozeIntent = new Intent(this, Main2Activity.class);
@@ -126,6 +123,9 @@ public class MainActivity extends AppCompatActivity {
         notificationManager.notify(4, builder.build());
     }
 
+    /*
+     * Las variables en este método están declaradas como globales
+     */
     public void notifiacionBarra(View v) {
         notificationManagerProgreso = NotificationManagerCompat.from(this);
         builderProgreso = new NotificationCompat.Builder(this, CHANNEL_ID);
@@ -134,12 +134,11 @@ public class MainActivity extends AppCompatActivity {
                 .setSmallIcon(R.drawable.ic_android_black_24dp)
                 .setPriority(NotificationCompat.PRIORITY_LOW);
 
-        // Issue the initial notification with zero progress
+        // Se establece el progreso a 0
         int PROGRESS_MAX = 100;
         int PROGRESS_CURRENT = 0;
         builderProgreso.setProgress(PROGRESS_MAX, PROGRESS_CURRENT, false);
         notificationManagerProgreso.notify(5, builderProgreso.build());
-
     }
 
     public void notificacionUp(View v) {
@@ -176,6 +175,4 @@ public class MainActivity extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
         }
     }
-
-
 }
