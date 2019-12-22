@@ -28,23 +28,26 @@ public class MainActivity extends AppCompatActivity {
         AlarmManager alarmManager;
         PendingIntent pendingIntent;
 
+        // Hora y minutos. Los segundos los dejamos a 0.
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(editTextHora.getText().toString()));
         calendar.set(Calendar.MINUTE, Integer.parseInt(editTextMin.getText().toString()));
         calendar.set(Calendar.SECOND, 0);
 
+        // Podemos definir quién recibe el intent, tenemos varias posibilidades
         Intent intent = new Intent(this, Alarma.class);
         //Intent intent = new Intent(this, MainActivity.class);
         pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
         //pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
+        // Se crea la instancia de AlarmManager
         alarmManager = (AlarmManager) this.getSystemService(this.ALARM_SERVICE);
 
         // Alarma inexacta
         //alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
          //       AlarmManager.INTERVAL_DAY, pendingIntent);
 
-        // Alarma exacta
+        // Alarma exacta (dependiendo de la versión de Android el comportamiento puede variar)
         alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
 
         Toast.makeText(this, "Alarma programada", Toast.LENGTH_SHORT).show();
