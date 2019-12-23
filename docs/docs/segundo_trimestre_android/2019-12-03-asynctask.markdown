@@ -4,8 +4,10 @@ title:  "AsyncTask"
 date:   2019-12-3 14:30:00 +0200
 categories: segundo_trimestre
 order: 1
+parent: Segundo trimestre Android
 ---
 
+# Asynctask
 
 En el ejemplo anterior utilizamos un hilo de ejecución independiente con la clase Thread. Android nos proporciona una formas más sencilla para trabajar con más hilos de ejecución. Es la clase `AsyncTask`. En nuestro ejemplo de uso haremos que otro hilo de ejecución cuente de 0 a 10 y lo muestre en un `editText`.
 
