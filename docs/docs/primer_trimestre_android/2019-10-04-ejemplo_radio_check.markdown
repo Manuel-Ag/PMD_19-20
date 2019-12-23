@@ -4,7 +4,10 @@ title:  "Ejemplo RadioButton y Checkbox"
 date:   2019-10-3 14:30:00 +0200
 categories: primer_trimestre
 order: 2
+parent: Primer trimestre Android
 ---
+
+# Ejemplo RadioButton y Checkbox
 
 **Ejemplo de clase**: <https://github.com/Manuel-Ag/PMD_19-20/tree/master/RadioButtonyCheckBox>
 

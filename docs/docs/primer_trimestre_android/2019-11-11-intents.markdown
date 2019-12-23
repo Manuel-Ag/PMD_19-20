@@ -4,7 +4,10 @@ title:  "Intents y filtros de intents"
 date:   2019-11-11 14:30:00 +0200
 categories: primer_trimestre
 order: 1
+parent: Primer trimestre Android
 ---
+
+# Intents y filtros de intents
 
 **Antes de nada, visita los siguientes enlaces:**
 * Intents y filtros de intents: <https://developer.android.com/guide/components/intents-filters.html?hl=es>

@@ -4,7 +4,10 @@ title:  "Fichero Manifest"
 date:   2019-10-2 14:30:00 +0200
 categories: primer_trimestre
 order: 1
+parent: Primer trimestre Android
 ---
+
+# Fichero Manifest
 
 El fichero Manifest es uno de los ficheros más importantes en un proyecto con Android Studio.
 

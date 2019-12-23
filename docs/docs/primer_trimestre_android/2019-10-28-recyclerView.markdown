@@ -4,7 +4,10 @@ title:  "RecyclerView"
 date:   2019-10-28 14:30:00 +0200
 categories: primer_trimestre
 order: 1
+parent: Primer trimestre Android
 ---
+
+# RecyclerView
 
 **Pasos para implementar un *RecyclerView*:**
 

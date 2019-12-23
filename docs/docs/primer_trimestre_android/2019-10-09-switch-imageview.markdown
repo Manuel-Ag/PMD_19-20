@@ -4,7 +4,10 @@ title:  "Ejemplo Switch e ImageView"
 date:   2019-10-9 14:30:00 +0200
 categories: primer_trimestre
 order: 2
+parent: Primer trimestre Android
 ---
+
+# Ejemplo Switch e ImageView
 
 **Ejemplo de clase**: <https://github.com/Manuel-Ag/PMD_19-20/tree/master/SwitcheImageView>
 

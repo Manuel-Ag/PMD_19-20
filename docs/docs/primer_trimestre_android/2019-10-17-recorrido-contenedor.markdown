@@ -4,7 +4,10 @@ title:  "Recorrido de un TableLayout"
 date:   2019-10-17 14:30:00 +0200
 categories: primer_trimestre
 order: 2
+parent: Primer trimestre Android
 ---
+
+# Recorrido de un TableLayout
 
 Esta vez vamos a intentar añadir botones mediante código en tiempo de ejecución.
 

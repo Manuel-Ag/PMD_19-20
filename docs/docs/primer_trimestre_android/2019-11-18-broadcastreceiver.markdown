@@ -4,7 +4,10 @@ title:  "Broadcast Receiver y SMS"
 date:   2019-11-18 14:30:00 +0200
 categories: primer_trimestre
 order: 1
+parent: Primer trimestre Android
 ---
+
+# BroadcastReceiver y SMS
 
 **Antes de nada, visita los siguientes enlaces:**
 

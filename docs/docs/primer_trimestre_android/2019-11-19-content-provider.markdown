@@ -4,7 +4,10 @@ title:  "Content providers y acceso a los contactos"
 date:   2019-11-19 14:30:00 +0200
 categories: primer_trimestre
 order: 1
+parent: Primer trimestre Android
 ---
+
+# Content providers y acceso a los contactos
 
 **Guía sobre content providers:**
 

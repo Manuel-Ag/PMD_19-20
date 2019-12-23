@@ -4,7 +4,7 @@ title:  "Primera aplicación"
 date:   2019-09-25 14:30:00 +0200
 categories: primer_trimestre
 order: 2
-parent: primer_trimestre_android
+parent: Primer trimestre Android
 ---
 
 # Primera aplicación

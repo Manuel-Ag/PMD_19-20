@@ -4,7 +4,10 @@ title:  "Diálogos"
 date:   2019-10-21 14:30:00 +0200
 categories: primer_trimestre
 order: 1
+parent: Primer trimestre Android
 ---
+
+# Diálogos
 
 Un diálogo tiene el siguiente aspecto:
 

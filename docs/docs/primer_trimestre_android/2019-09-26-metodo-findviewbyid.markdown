@@ -4,7 +4,7 @@ title:  "Método FindViewByID"
 date:   2019-09-26 14:30:00 +0200
 categories: primer_trimestre
 order: 1
-parent: primer_trimestre_android
+parent: Primer trimestre Android
 ---
 
 # Método FindViewById

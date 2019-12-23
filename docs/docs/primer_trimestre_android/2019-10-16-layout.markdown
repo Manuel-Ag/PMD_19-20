@@ -4,7 +4,10 @@ title:  "Layouts"
 date:   2019-10-16 14:30:00 +0200
 categories: primer_trimestre
 order: 1
+parent: Primer trimestre Android
 ---
+
+# Layouts
 
 En la asignatura utilizaremos los *layouts* que no estén *legacy* en Android Studio (los que estén en este apartado se consideran anticuados, siendo posible el uso de opciones mejores). 
 

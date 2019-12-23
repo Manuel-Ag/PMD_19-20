@@ -4,7 +4,10 @@ title:  "Ejemplo sencillo de Fragment"
 date:   2019-10-18 14:30:00 +0200
 categories: primer_trimestre
 order: 1
+parent: Primer trimestre Android
 ---
+
+# Ejemplo sencillo de Fragment
 
 En este ejemplo vamos a cambiar dónde creamos la interfaz de usuario, pasando de la Actividad principal a un Fragmento.
 
