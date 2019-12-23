@@ -4,7 +4,10 @@ title:  "Método FindViewByID"
 date:   2019-09-26 14:30:00 +0200
 categories: primer_trimestre
 order: 1
+parent: primer_trimestre_android
 ---
+
+# Método FindViewById
 
 Para acceder a una vista (botones, cajas de texto, checkboxes, etc.) deberemos primeramente de referenciar ese elemento:
 
