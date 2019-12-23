@@ -4,7 +4,10 @@ title:  "Lectura fichero directorio raw"
 date:   2019-12-12 14:30:00 +0200
 categories: segundo_trimestre
 order: 1
+parent: Segundo trimestre Android
 ---
+
+# Lectura fichero directorio raw
 
 En el directorio `raw`, según la documentación oficial de Android se utiliza para almacenar:
 

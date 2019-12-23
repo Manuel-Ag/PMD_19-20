@@ -4,7 +4,10 @@ title:  "Notificaciones"
 date:   2019-12-5 14:30:00 +0200
 categories: segundo_trimestre
 order: 1
+parent: Segundo trimestre Android
 ---
+
+# Notificaciones
 
 Para este ejemplo vamos a seguir paso a paso la documentación oficial de Android respecto a las notificaciones:
 

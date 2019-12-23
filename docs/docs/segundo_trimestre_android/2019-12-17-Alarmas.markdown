@@ -4,7 +4,10 @@ title:  "Alarmas"
 date:   2019-12-17 14:30:00 +0200
 categories: segundo_trimestre
 order: 1
+parent: Segundo trimestre Android
 ---
+
+# Alarmas
 
 En este ejemplo se establecerá una alarma en el dispositivo Android que se lanzará dependiendo de la especificación del usuario. La clase que utilizaremos será `AlarmManager` y el componente que recibirá la alerta será un `BroadcastReceiver`.
 

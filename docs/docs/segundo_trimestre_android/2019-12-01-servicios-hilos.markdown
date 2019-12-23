@@ -4,7 +4,10 @@ title:  "Servicios e hilos"
 date:   2019-12-1 14:30:00 +0200
 categories: segundo_trimestre
 order: 1
+parent: Segundo trimestre Android
 ---
+
+# Servicios e hilos
 
 En este ejemplo vamos a utilizar un sevicio que compruebe si la wifi está conectada no.
 
