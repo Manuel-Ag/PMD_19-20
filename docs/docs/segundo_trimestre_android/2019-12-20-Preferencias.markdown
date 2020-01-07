@@ -11,18 +11,18 @@ parent: Segundo trimestre Android
 
 Las preferencias nos permiten almacenar valores para almacenar varios tipos de datos, como por ejemplo la configuración del usuario, opciones de visionado, etc. Los valores se almacenan en un fichero con el formato clave-valor. Veremos varias formas de almacenar estas preferencias en el dispositivo.
 
-#### Utilizando la clase `SharedPreferences`
+### Utilizando la clase `SharedPreferences`
 
 Esta es una clase que permite guardar preferencias en el fichero si necesidad de utilizar ninguna vista, aunque si lo deseásemos obviamente podrían utilizarse.
 
-1. Instanciar la clase:
+1\. Instanciar la clase:
 
 ```java
 SharedPreferences misPreferencias = getSharedPreferences("prefs", MODE_PRIVATE);
 ```
 Se crea en modo privado, por lo que el fichero será accesible únicamente por nuestra aplicación. Si existe el fichero `prefs` se prepara la clase para leerlo, en caso contrario se creará.
 
-2. Guardar las preferencias:
+2\. Guardar las preferencias:
 
 ```java
 SharedPreferences.Editor editor = misPreferencias.edit();
@@ -34,7 +34,7 @@ editor.apply();
 
 Se guardarán de la forma clave-valor. Puedes comprobar que hay muchos métodos dependiendo del tipo de dato que se desea guardar, aunque la clave será siempre `String`. Al final se aplicarán los cambios con el método `apply()`.
 
-3. Recuperar los datos:
+3\. Recuperar los datos:
 
 ```java
 String nombre = misPreferencias.getString("nombre", "Sin dato");
@@ -49,23 +49,23 @@ Observa como dependiendo del tipo de dato se utiliza un método u otro.
 {:refdef}
 
 
-#### Utilizando la clase `PreferenceActivity`
+### Utilizando la clase `PreferenceActivity`
 
 El nombre de la clase ya indica que en realidad se va a trabajar con una clase que hereda de `Activity`. Esta clase nos permitirá crear un menú para el usuario que guarde automáticamente las preferencias en el fichero.
 
-1. Crea un fichero `preferencias.xml` en el directorio `xml` de `resources`:
+1\. Crea un fichero `preferencias.xml` en el directorio `xml` de `resources`:
 
 {:refdef: style="text-align: center;"}
 ![Android]({{ site.baseurl }}/assets/assets_post_preferencias/ficheropref.gif)
 {:refdef}
 
-2. Añade los controles que desees que tenga esa ventana a través del diseñador:
+2\. Añade los controles que desees que tenga esa ventana a través del diseñador:
 
 {:refdef: style="text-align: center;"}
 ![Android]({{ site.baseurl }}/assets/assets_post_preferencias/Captura1.jpg)
 {:refdef}
 
-3. Crea la actividad:
+3\. Crea la actividad:
 
 ```java
 public class PreferenciasActivity extends PreferenceActivity {
@@ -91,7 +91,7 @@ public class PreferenciasActivity extends PreferenceActivity {
 
 Lo que estamos haciendo en realidad es cambiar la vista actual a la definida en `preferencas`.
 
-4. Llama a esa actividad mediante un intent:
+4\. Llama a esa actividad mediante un intent:
 
 ```java
 public void clasePreferenceActivity(View v) {
@@ -105,7 +105,7 @@ Cuando se llame a la actividad el usuario podrá cambiar los valores cambiando e
 ![Android]({{ site.baseurl }}/assets/assets_post_preferencias/Captura2.jpg)
 {:refdef}
 
-5. Recuperar la información:
+5\. Recuperar la información:
 
 Para recuperar los valores almacenados debemos de fijarnos en el atributo `key` de los elementos que hay en las propiedades.
 
