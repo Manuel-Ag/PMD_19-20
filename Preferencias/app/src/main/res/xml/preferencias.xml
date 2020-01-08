@@ -24,8 +24,8 @@
             android:title="Edit text preference" />
         <ListPreference
             android:defaultValue="1"
-            android:entries="@android:array/emailAddressTypes"
-            android:entryValues="@android:array/emailAddressTypes"
+            android:entries="@array/string_array_name"
+            android:entryValues="@array/string_array_name"
             android:key="list_preference_1"
             android:title="List preference" />
         <MultiSelectListPreference

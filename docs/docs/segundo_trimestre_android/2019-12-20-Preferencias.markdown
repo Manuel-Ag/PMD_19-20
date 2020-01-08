@@ -9,20 +9,20 @@ parent: Segundo trimestre Android
 
 # Preferencias
 
-Las preferencias nos permiten almacenar valores para almacenar varios tipos de datos, como por ejemplo la configuración del usuario, opciones de visionado, etc. Los valores se almacenan en un fichero con el formato clave-valor. Veremos varias formas de almacenar estas preferencias en el dispositivo.
+Las preferencias nos permiten almacenar valores para almacenar varios tipos de datos, como por ejemplo la configuración del usuario, opciones de visionado, etc. Los valores se almacenan en un fichero con el formato clave-valor. Veremos dos formas de almacenar estas preferencias en el dispositivo.
 
 ### Utilizando la clase `SharedPreferences`
 
-Esta es una clase que permite guardar preferencias en el fichero si necesidad de utilizar ninguna vista, aunque si lo deseásemos obviamente podrían utilizarse.
+Permite guardar preferencias en el fichero sin necesidad de utilizar ninguna vista, aunque si lo deseásemos obviamente podrían utilizarse.
 
-1\. Instanciar la clase:
+1\. Instancia la clase:
 
 ```java
 SharedPreferences misPreferencias = getSharedPreferences("prefs", MODE_PRIVATE);
 ```
 Se crea en modo privado, por lo que el fichero será accesible únicamente por nuestra aplicación. Si existe el fichero `prefs` se prepara la clase para leerlo, en caso contrario se creará.
 
-2\. Guardar las preferencias:
+2\. Guarda las preferencias deseadas:
 
 ```java
 SharedPreferences.Editor editor = misPreferencias.edit();
@@ -34,7 +34,7 @@ editor.apply();
 
 Se guardarán de la forma clave-valor. Puedes comprobar que hay muchos métodos dependiendo del tipo de dato que se desea guardar, aunque la clave será siempre `String`. Al final se aplicarán los cambios con el método `apply()`.
 
-3\. Recuperar los datos:
+3\. Recupera los datos:
 
 ```java
 String nombre = misPreferencias.getString("nombre", "Sin dato");
@@ -42,7 +42,7 @@ int edad = misPreferencias.getInt("edad", 0);
 boolean soltero = misPreferencias.getBoolean("soltero", true);
 ```
 
-Observa como dependiendo del tipo de dato se utiliza un método u otro.
+Observa como dependiendo del tipo de dato a recuperar se utiliza un método u otro.
 
 {:refdef: style="text-align: center;"}
 ![Android]({{ site.baseurl }}/assets/assets_post_preferencias/sharedpref.gif)
@@ -113,7 +113,7 @@ Para recuperar los valores almacenados debemos de fijarnos en el atributo `key` 
 ![Android]({{ site.baseurl }}/assets/assets_post_preferencias/Captura3.jpg)
 {:refdef}
 
-Será la clave necesaria para recuperar el valor:
+ Utilizaremos `key` para recuperar el valor:
 
 ```java
 @Override
