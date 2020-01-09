@@ -6,8 +6,9 @@ categories: segundo_trimestre
 order: 1
 parent: Segundo trimestre Android
 ---
-
+{:refdef: style="text-align: left;"}
 [GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/MediaPlayer){: .btn .btn-blue }
+{:refdef}
 
 # MediaPlayer
 
