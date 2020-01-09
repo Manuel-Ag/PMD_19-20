@@ -13,7 +13,9 @@ parent: Segundo trimestre Android
 
 Utilizaremos la clase `MediaPlayer` para reproducir una canción, tanto desde los recursos de la aplicación como recursos alojados en un servidor externo. Primeramente, es importante leer la documentación oficial:
 
+{:refdef: style="text-align: center;"}
 [Documentación](https://developer.android.com/reference/android/media/MediaPlaye){: .btn .btn-green }
+{:refdef}
 
 `MediaPlayer` se basa en estados para gestionar la reproducción. Es importante tener claro el diagrama de estados de esta clase:
 
