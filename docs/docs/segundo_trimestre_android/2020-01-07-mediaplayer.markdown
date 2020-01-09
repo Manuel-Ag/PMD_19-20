@@ -13,20 +13,20 @@ Utilizaremos la clase `MediaPlayer` para reproducir una canción, tanto desde lo
 
 +  <https://developer.android.com/reference/android/media/MediaPlayer>
 
-`MediapPlayer` se basa en estados para gestionar la reproducción. Es importante tener claro el diagrama de estados de esta clase:
+`MediaPlayer` se basa en estados para gestionar la reproducción. Es importante tener claro el diagrama de estados de esta clase:
 
 {:refdef: style="text-align: center;"}
-![Android]({{ site.baseurl }}/assets/assets_post_mediaplayer/captura1.gif)
+![Android]({{ site.baseurl }}/assets/img_post_mediaplayer/captura1.gif)
 {:refdef}
 
-A la hora de utilizar esta clase ten siempre el diagrama presente. Los círculos azules representan el estado actual de la reproducción mientras que las fechas y métodos cómo se puede cambiar de un estado a otro. No se puede pasar libremente de un estado a otro, hay que respetar el flujo de estados marcado por el diagrama. En nuestro ejemplo tenemos un reproductor de música básico.
+A la hora de utilizar esta clase es recomendable tener el diagrama presente. Los círculos azules representan el estado actual de la reproducción mientras que las fechas y métodos cómo se puede cambiar de un estado a otro. No se puede pasar libremente de un estado a otro, hay que respetar el flujo de estados marcado por el diagrama. El siguiente código corresponde a un reproductor de música básico.
 
 ### 1\. Instancia de la clase
 
 ```java
 MediaPlayer mediaplayer =  MediaPlayer.create(this, R.raw.ac);
 ```
-Al instanciar de esta forma nos ponemos directamente en el estado `prepared`.
+Al instanciar con este constructor nos ponemos directamente en el estado `prepared`.
 
 ### 2\. Play
 
@@ -41,7 +41,7 @@ public void play(View v) {
 }
 ```
 
-Al estar ya en el estado `prepared` simplemente hay que llamar al método `start()` para comenzar a reproducir. Comprobamos que no llamamos otra vez a `start()` si se está reproduciendo.
+Al estar ya en el estado `prepared` simplemente hay que llamar al método `start()` para comenzar a reproducir. Comprobamos que no llamamos otra vez a `start()` si se está reproduciendo actualmente.
 
 ### 2\. Pause
 
@@ -55,7 +55,7 @@ public void pause(View v) {
         textViewTexto.setText("No estaba reproduciéndose");
 }
 ```
-Para pausar tenemos que comprobar que se está reproduciendo antes.
+Para pausar tenemos que comprobar que se está reproduciendo.
 
 ### 3\. Stop
 
@@ -71,7 +71,7 @@ public void stop(View v) throws IOException {
     }
 }
 ```
-Podremos parar desde el estado `paused` y `started`. Cuando el estado es `paused`, significa que no estamos en la posición 0 de la canción (0 mili segundos) ni está en reproducción.
+Podremos parar desde el estado `paused` y `started`. Para saber si estamos `paused` comprobamos que la posición de la canción no es 0 y que además no se está reproduciendo.
 
 ### 4\. Cambiar canción
 
@@ -121,7 +121,7 @@ public void cambiarStreaming(View v) throws IOException {
 
 En esta ocasión el recurso no está en local. Necesitamos una URL válida que permita acceder al fichero. Al llamar a `setDataSource()` podemos pasar una URL de tipo `String`.
 
-En esta ocasión se llama a `prepareAsync()` para cargar el recurso asíncronamente, ya que es posible que se este recurso tarde en cargarse. Con `setOnPreparedListener()` configuramos un listener que esperará a que el estado cambie a `prepared`. Cuando se llegue a este estado empezaremos a reproducir. También desactivaremos el listener ya que no queremos que siempre que se vaya al estado `prepared` empiece a reproducirse la canción.
+Se llama a `prepareAsync()` para cargar el recurso asíncronamente, ya que es posible que se este recurso tarde más en cargar. Con `setOnPreparedListener()` configuramos un listener que esperará a que el estado cambie a `prepared`. Cuando se llegue a este estado empezaremos a reproducir. También desactivaremos el listener ya que no queremos que siempre que se vaya al estado `prepared` empiece a reproducirse la canción.
 
 ### 6\.
 
@@ -138,4 +138,4 @@ public void seekTo(View v) {
 
 `MediaPlayer` nos da muchas posibilidades de gestión a través de sus métodos. Podemos ira un punto de la reproducción, saber el tiempo de reproducción actual, si estamos en loop, el punto actual de reproducción, etc.
 
-* Proyecto GitHub: <https://github.com/Manuel-Ag/PMD_19-20/tree/master/MediaPlayer>
+* **Proyecto GitHub:** <https://github.com/Manuel-Ag/PMD_19-20/tree/master/MediaPlayer>
