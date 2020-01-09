@@ -7,9 +7,9 @@ order: 1
 parent: Segundo trimestre Android
 ---
 
-# MediaPlayer
-
 [GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/MediaPlayer){: .btn .btn-blue }
+
+# MediaPlayer
 
 Utilizaremos la clase `MediaPlayer` para reproducir una canción, tanto desde los recursos de la aplicación como recursos alojados en un servidor externo. Primeramente, es importante leer la documentación oficial:
 
