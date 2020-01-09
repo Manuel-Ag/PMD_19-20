@@ -7,7 +7,9 @@ order: 1
 parent: Segundo trimestre Android
 ---
 
-# MediaPlayer ### [GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/MediaPlayer){: .btn .btn-blue }
+# MediaPlayer
+
+[GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/MediaPlayer){: .btn .btn-blue }
 
 Utilizaremos la clase `MediaPlayer` para reproducir una canción, tanto desde los recursos de la aplicación como recursos alojados en un servidor externo. Primeramente, es importante leer la documentación oficial:
 
@@ -137,5 +139,3 @@ public void seekTo(View v) {
 ```
 
 `MediaPlayer` nos da muchas posibilidades de gestión a través de sus métodos. Podemos ira un punto de la reproducción, saber el tiempo de reproducción actual, si estamos en loop, el punto actual de reproducción, etc.
-
-* **Proyecto GitHub:** <https://github.com/Manuel-Ag/PMD_19-20/tree/master/MediaPlayer>
