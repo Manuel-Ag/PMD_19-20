@@ -11,7 +11,7 @@ parent: Segundo trimestre Android
 
 La clase `MediaController` permite añadir unos controles básicos para administrar la reproducción. Se puede combinar con la clase `MediaPlayer` para la reproducción de audio y con la vista `VideoView` para la de vídeo.
 
-## `MediaController` y `MediaPlayer`
+## MediaController y MediaPlayer
 
 [GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/MediaControllerMusica){: .btn .btn-blue }
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements MediaController.M
 }
 ```
 
-3\. Por cada método de la interface de debe de llamar al método correspondiente de `MediaPlayer`:
+3\. Por cada método de la interface de debe de llamar al método correspondiente de `MediaPlayer` o devolver un valor definido:
 
 ```java
 public void start() {
@@ -91,7 +91,7 @@ public boolean onTouchEvent(MotionEvent event) {
 }
 ```
 
-## `MediaController` y `VideoView`
+## MediaController y VideoView
 
 [GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/MediaControllerVideo){: .btn .btn-blue }
 
