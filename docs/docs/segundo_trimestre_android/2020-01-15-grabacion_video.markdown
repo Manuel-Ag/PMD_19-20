@@ -11,7 +11,7 @@ parent: Segundo trimestre Android
 
 # Grabación de vídeo
 
-En el siguiente ejemplo se realizará una grabación de vídeo con el dispositivo para a continuación reproducirla en un `videoView`.
+En el siguiente ejemplo se realizará una grabación de vídeo con el dispositivo para, a continuación, reproducirla en un `videoView`.
 
 {:refdef: style="text-align: center;"}
 ![Android]({{ site.baseurl }}/assets/img_post_grabacion/gif1.gif)
@@ -35,7 +35,7 @@ public void grabar(View v) {
     startActivityForResult(intent, GRABAR);
 }
 ```
-Con `putExtra()` se pueden definir algunos parámetros en la grabación. Consulta la {:refdef: style="text-align: center;"}[Documentación](https://developer.android.com/reference/android/provider/MediaStore){: .btn .btn-green }{:refdef}
+Con `putExtra()` se pueden definir algunos parámetros en la grabación. Consulta la [Documentación](https://developer.android.com/reference/android/provider/MediaStore)
 
 3\. Recupera la `Uri`.
 
@@ -50,4 +50,4 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
     }
 }
 ```
-Para empezar a reproducir simplemente basta con llamar al método `start()`, pero recuerda que tenemos otros muchos método para administrar un `videoView` definidos en la {:refdef: style="text-align: center;"}[Documentación](https://developer.android.com/reference/android/widget/VideoView){: .btn .btn-green }{:refdef}
+Para empezar a reproducir simplemente basta con llamar al método `start()`, pero recuerda que tenemos otros muchos método para administrar un `videoView` definidos en la [Documentación](https://developer.android.com/reference/android/widget/VideoView)
