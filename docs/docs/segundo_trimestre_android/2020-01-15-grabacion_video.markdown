@@ -35,7 +35,7 @@ public void grabar(View v) {
     startActivityForResult(intent, GRABAR);
 }
 ```
-Con `putExtra()` se pueden definir algunos parámetros en la grabación. Consulta la [Documentación](https://developer.android.com/reference/android/provider/MediaStore)
+Con `putExtra()` se pueden definir algunos parámetros en la grabación. Consulta la [Documentación](https://developer.android.com/reference/android/provider/MediaStore){: .btn .btn-green }
 
 3\. Recupera la `Uri`.
 
@@ -50,4 +50,4 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
     }
 }
 ```
-Para empezar a reproducir simplemente basta con llamar al método `start()`, pero recuerda que tenemos otros muchos método para administrar un `videoView` definidos en la [Documentación](https://developer.android.com/reference/android/widget/VideoView)
+Para empezar a reproducir simplemente basta con llamar al método `start()`, pero recuerda que tenemos otros muchos método para administrar un `videoView` definidos en la [Documentación](https://developer.android.com/reference/android/widget/VideoView){: .btn .btn-green }

@@ -17,7 +17,7 @@ Cuando se cargan recursos de imágenes en una aplicación se debe tener en cuent
 [Documentación](https://developer.android.com/topic/performance/graphics/load-bitmap){: .btn .btn-green }
 {:refdef}
 
-En el ejemplo reproducimos los mismos pasos:
+En el ejemplo reproduciremos los mismos pasos:
 
 1\. Seleccionamos una imagen del dispositivo utilizando un `intent` implícito.
 ```java
