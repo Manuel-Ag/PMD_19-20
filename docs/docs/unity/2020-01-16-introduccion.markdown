@@ -4,7 +4,7 @@ title:  "Introducción Unity"
 date:   2020-01-16 14:30:00 +0200
 categories: unity
 order: 1
-parent: unity
+parent: Unity
 ---
 
 [Documentación](https://docs.unity3d.com/es/2019.3/Manual/UnityOverview.html){: .btn .btn-green }
