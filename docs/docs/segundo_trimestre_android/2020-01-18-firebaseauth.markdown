@@ -60,6 +60,7 @@ A través de los métodos de `mAuth` podremos realizar todas las opciones.
                     }
                 });
     }
+    
 ```
 
 Cuando el usuario consiga autenticarse lanzaremos otra actividad.

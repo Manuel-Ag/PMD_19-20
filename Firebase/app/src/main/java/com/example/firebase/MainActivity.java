@@ -18,10 +18,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 
-// https://firebase.google.com/docs/android/setup?hl=es
-// https://play.google.com/store/apps/details?id=com.instagram.android
-//https://firebase.google.com/docs/android/setup?authuser=0
-
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
