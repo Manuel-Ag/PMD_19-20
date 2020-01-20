@@ -14,3 +14,24 @@ parent: Segundo trimestre Android
 En clase se probarán los siguientes componentes para Android:
 
 ![Android]({{ site.baseurl }}/assets/img_post_firebase/captura2.png) ![Android]({{ site.baseurl }}/assets/img_post_firebase/captura1.png) ![Android]({{ site.baseurl }}/assets/img_post_firebase/captura3.png)
+
+
+# Configuración inicial
+
+Necesitas una cuenta de Gmail para darnos de alta en Firebase:
+
+* <https://firebase.google.com/>
+
+Una vez activada la cuenta, creamos un nuevo proyecto:
+
+![Android]({{ site.baseurl }}/assets/img_post_firebase/captura4.png)
+
+Cuando terminen los pasos de configuración deberemos de añadir nuestra aplicación:
+
+![Android]({{ site.baseurl }}/assets/img_post_firebase/captura5.png)
+
+Y selecciona Android:
+
+![Android]({{ site.baseurl }}/assets/img_post_firebase/captura6.png)
+
+Aparecerá una guía de cómo añadir la aplicación al proyecto. Una vez finalizados los pasos ya podremos conectarnos desde la aplicación.
