@@ -9,12 +9,4 @@ parent: Segundo trimestre Android
 
 # Firebase Authentication
 
-
-
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iosNuIdQoy8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-En clase se probarán los siguientes componentes para Android:
-
-![Android]({{ site.baseurl }}/assets/img_post_firebase/captura2.png) ![Android]({{ site.baseurl }}/assets/img_post_firebase/captura1.png) ![Android]({{ site.baseurl }}/assets/img_post_firebase/captura3.png)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8sGY55yxicA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
