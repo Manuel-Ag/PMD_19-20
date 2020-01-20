@@ -62,6 +62,8 @@ A través de los métodos de `mAuth` podremos realizar todas las opciones.
     }
 ```
 
+Cuando el usuario consiga autenticarse lanzaremos otra actividad.
+
 ## Crear usuario
 
 ```java
@@ -82,6 +84,8 @@ public void crear(View v) {
 }
 ```
 
+Se debe proporcionar un usuario y contraseña válidos.
+
 ## Enviar email de verificación en el registramos
 
 ```java
@@ -100,6 +104,8 @@ private void enviarEmail() {
             });
 }
 ```
+
+Hay que llamar a este método cuando se cree una cuenta de usuario satisfactoriamente.
 
 ## Login comprobando que se ha verificado mediante Email
 
