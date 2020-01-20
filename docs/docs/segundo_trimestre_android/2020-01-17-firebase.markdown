@@ -13,4 +13,4 @@ parent: Segundo trimestre Android
 
 En clase se probarán los siguientes componentes para Android:
 
-![Android]({{ site.baseurl }}/assets/img_post_firebase/captura1.png) ![Android]({{ site.baseurl }}/assets/img_post_firebase/captura2.png) ![Android]({{ site.baseurl }}/assets/img_post_firebase/captura3.png)
+![Android]({{ site.baseurl }}/assets/img_post_firebase/captura2.png) ![Android]({{ site.baseurl }}/assets/img_post_firebase/captura1.png) ![Android]({{ site.baseurl }}/assets/img_post_firebase/captura3.png)
