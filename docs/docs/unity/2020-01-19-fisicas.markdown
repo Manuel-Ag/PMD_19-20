@@ -27,6 +27,10 @@ Necesitaremos ambos para que nuestro juego tenga unas físicas básicas.
 
 Este es uno de los tipos más simples de Collider. Simplemente añádelo a un objeto y define su tamaño y posición. Al combinarlo con un Rigidbody 2D tendremos un objeto al que le afecta la física y que interacciona con el entorno.
 
+{:refdef: style="text-align: center;"}
+![Imagen]({{ site.baseurl }}/assets/img_post_u_introduccion/captura4.PNG)
+{:refdef}
+
 [Collider2D](https://docs.unity3d.com/es/530/Manual/Collider2D.html){: .btn .btn-green }
 
 ## Tilemap Collider 2d para el suelo
@@ -42,5 +46,5 @@ Esto hará que cada tile tenga física. Podemos unirlas con el compontente Compo
 No olvides activar la opción `Used By Composite` del Tilemap Collider ni `Body Type` a static del Rigidbody 2D para que el suelo no caiga.
 
 {:refdef: style="text-align: center;"}
-![Imagen]({{ site.baseurl }}/assets/img_post_u_introduccion/captura4.PNG)
+![Imagen]({{ site.baseurl }}/assets/img_post_u_introduccion/captura5.PNG)
 {:refdef}
