@@ -22,5 +22,5 @@ En el caso de `Sunny land`, observa como los recursos de sprites y animaciones v
 No olvides seleccionar la opción `Sprite mode` a `Multiple` si deseas recortar elementos de dentro de la imagen:
 
 {:refdef: style="text-align: center;"}
-![Android]({{ site.baseurl }}/assets/img_post_u_introduccion/captura2.png)
+![Imagen]({{ site.baseurl }}/assets/img_post_u_introduccion/captura2.PNG)
 {:refdef}

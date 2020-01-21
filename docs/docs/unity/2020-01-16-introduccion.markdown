@@ -26,7 +26,7 @@ Unity es un motor de videojuego que permite crear juegos para diferentes platafo
 + Descarga Unity Hub: <https://store.unity.com/download?ref=personal>
 
 {:refdef: style="text-align: center;"}
-![Android]({{ site.baseurl }}/assets/img_post_u_introduccion/captura1.png)
+![Imagen]({{ site.baseurl }}/assets/img_post_u_introduccion/captura1.png)
 {:refdef}
 
 Instala Unity, versión 2019 (Installs), regístrate y crea un proyecto (NEW).

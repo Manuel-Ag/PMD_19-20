@@ -42,5 +42,5 @@ Esto hará que cada tile tenga física. Podemos unirlas con el compontente Compo
 No olvides activar la opción `Used By Composite` del Tilemap Collider ni `Body Type` a static del Rigidbody 2D para que el suelo no caiga.
 
 {:refdef: style="text-align: center;"}
-![Android]({{ site.baseurl }}/assets/img_post_u_introduccion/captura4.png)
+![Imagen]({{ site.baseurl }}/assets/img_post_u_introduccion/captura4.PNG)
 {:refdef}

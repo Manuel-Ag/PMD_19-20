@@ -30,7 +30,7 @@ Para pintar en el Tilemap se ha utilizado el componente Palette. Los recursos im
 Para utilizar los sprites de Sunny-land simplemente debemos crear una nueva Palette y arrastrar los elementos a esta paleta. No olvides comprobar que el tamaño de las imágenes concuerdan con el tamaño de las unidades de unity. Se debe indicar el número de pixeles por unidad en los parámetros de la imagen:
 
 {:refdef: style="text-align: center;"}
-![Android]({{ site.baseurl }}/assets/img_post_u_introduccion/captura3.png)
+![Imagen]({{ site.baseurl }}/assets/img_post_u_introduccion/captura3.PNG)
 {:refdef}
 
 En este caso se indica que en cada imagen corresponden 16 píxeles por unidad.
