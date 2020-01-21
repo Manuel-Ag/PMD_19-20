@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Físicas básicas"
+date:   2020-01-19 14:30:00 +0200
+categories: unity
+order: 1
+parent: Unity
+---
+
+# Físicas básicas
+
+Hasta hora únicamente hemos pintado en un Tilemap, no existe nada de físicas. Para todo lo que queramos que tenga interacción con los demás debemos de añadir Colliders, en concreto la versión 2D de éstos.
+
+## Colliders y Rigidbody 2D
+
+Los colliders permiten definir la superficie que interaccione con las físicas.
+
+[Colliders](https://docs.unity3d.com/es/530/Manual/CollidersOverview.html){: .btn .btn-green }
+
+Rigidbody 2D hace que al objeto el afecte la física.
+
+[Rigidbody2D](https://docs.unity3d.com/es/530/Manual/class-Rigidbody2D.html){: .btn .btn-green }
+
+Necesitaremos ambos para que nuestro juego tenga unas físicas básicas.
+
+## Box Collider 2D para cualquier objeto
+
+Este es uno de los tipos más simples de Collider. Simplemente añádelo a un objeto y define su tamaño y posición. Al combinarlo con un Rigidbody 2D tendremos un objeto al que le afecta la física y que interacciona con el entorno.
+
+[Collider2D](https://docs.unity3d.com/es/530/Manual/Collider2D.html){: .btn .btn-green }
+
+## Tilemap Collider 2d para el suelo
+
+Añade al suelo este Collider para que tenga física.
+
+[Tilemap Collider](https://docs.unity3d.com/Manual/class-TilemapCollider2D.html){: .btn .btn-green }
+
+Esto hará que cada tile tenga física. Podemos unirlas con el compontente Composite Collider 2D.
+
+[Composite Collider](https://docs.unity3d.com/Manual/class-CompositeCollider2D.html){: .btn .btn-green }
+
+No olvides activar la opción `Used By Composite` del Tilemap Collider ni `Body Type` a static del Rigidbody 2D para que el suelo no caiga.
+
+{:refdef: style="text-align: center;"}
+![Android]({{ site.baseurl }}/assets/img_post_u_introduccion/captura4.png)
+{:refdef}
