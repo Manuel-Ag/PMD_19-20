@@ -11,11 +11,11 @@ parent: Unity
 
 # Importar assets de una fuente diferente a la Unity Store
 
-Para importar assets ajenos a la Unity Store simplemente debemos de arrastrar esos recursos a la estructura del proyecto. Es el ejemplo de:
+Para importar assets ajenos a la Unity Store simplemente debemos de arrastrar esos recursos a la estructura del proyecto. Lo haremos para los siguientes recursos:
 
 + <https://ansimuz.itch.io/sunny-land-pixel-game-art>
 
-En el caso de `Sunny land`, observa como los recursos de sprites y animaciones vienen todos en la misma imagen. Para poder ser utilizados debemos de recortaros:
+En el caso de `Sunny Land`, observa como algunos de imágenes vienen con todos los elementos en en el mismo fichero. Para poder ser utilizados debemos recortaros:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gbgIA3pwpHc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

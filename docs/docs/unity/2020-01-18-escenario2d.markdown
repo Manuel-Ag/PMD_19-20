@@ -21,7 +21,7 @@ Este objeto nos sirve para separar el escenario en cuadrículas en la que pintar
 
 ## Sprites y Palette
 
-Para pintar en el Tilemap se ha utilizado el componente Palette. Los recursos importados de la Unity Store vienen preparados para ser utilizados. Sin embargo, para los recursos importados de fuentes externas debemos de crear nuestra propia Palette. Guía de uso:
+Para pintar en el Tilemap se utiliza el componente Palette. Los recursos importados de la Unity Store vienen preparados para ser utilizados. Sin embargo, para los recursos importados de fuentes externas debemos de crear nuestra propia Palette. Guía de uso:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JESTeoD7-DE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -29,7 +29,7 @@ Unity es un motor de videojuego que permite crear juegos para diferentes platafo
 ![Imagen]({{ site.baseurl }}/assets/img_post_u_introduccion/captura1.png)
 {:refdef}
 
-Instala Unity, versión 2019 (Installs), regístrate y crea un proyecto (NEW).
+Instala Unity versión 2019, regístrate y crea un nuevo proyecto proyecto.
 
 ## Assets para ejemplo clase
 
@@ -43,6 +43,6 @@ Un aspecto fundamental en el desarrollo de un juego son los recursos a utilizar 
 + <https://assetstore.unity.com/packages/3d/characters/dungeon-escape-119390>
 + <https://assetstore.unity.com/packages/2d/environments/too-cube-forest-the-free-2d-platformer-game-tile-set-117493?q=tileable%202d&orderBy=0>
 
-Y, además, un recurso externo a la Unity Store:
+Y un recurso externo a la Unity Store:
 
 + <https://ansimuz.itch.io/sunny-land-pixel-game-art>
