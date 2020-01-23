@@ -42,7 +42,6 @@ public class Storage extends AppCompatActivity {
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         // Get a URL to the uploaded content
                         //Uri downloadUrl = taskSnapshot.getDownloadUrl();
-                        //taskSnapshot.get
                         Log.d("prueba", "completada la subida");
                     }
                 })
@@ -63,11 +62,7 @@ public class Storage extends AppCompatActivity {
                     @Override
                     public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
                         // Successfully downloaded data to local file
-                        // ...
-
-                        //Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/prueba-e593f.appspot.com/o/images%2Fcaptura2.jpg?alt=media&token=237213eb-5fab-4f6d-92a4-601b11c1b6a2").into(imageView);
-
-                        riversRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                       riversRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                             @Override
                             public void onSuccess(Uri uri) {
                                 ImageView imageView = findViewById(R.id.imageView);

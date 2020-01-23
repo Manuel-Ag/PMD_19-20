@@ -19,7 +19,7 @@ El primer paso es configurar en entorno. Tenemos los pasos explicados en la docu
 
 [Primeros pasos](https://firebase.google.com/docs/firestore/quickstart?hl=ES){: .btn .btn-green }
 
-No olvides añadir al fichero gradle:` implementation 'com.google.firebase:firebase-firestore:21.2.1' `
+No olvides añadir al fichero gradle:` implementation 'com.google.firebase:firebase-firestore:21.2.1' ` ni configurar las reglas para que únicamente puedan acceder los usuarios autenticados.
 
 A continuación, crea la base de datos desde el panel de control de Firebase. Selecciona la base de datos correcta:
 
@@ -34,7 +34,7 @@ Ya está el entorno preparado para utilizar la base de datos. Desde el código, 
 FirebaseFirestore db = FirebaseFirestore.getInstance();
 ```
 
-A través del objeto `db` lanzaremos todas las consultas a la base de datos. Los ejemplos básicos de insertar y leer datos los puedes obtener tanto en el GitHub de la asignatura como en Android Studio en `Tools>Firebase>Firestore`. En esta ruta también encontrarás una serie de documentación para lanzar consultas simples. Importante consultar:
+A través del objeto `db` lanzaremos todas las consultas a la base de datos. Los ejemplos básicos de insertar y leer datos los puedes obtener tanto en el GitHub de la asignatura como en Android Studio en `Tools>Firebase>Firestore`. En esta ruta también encontrarás una serie de ejemplos para lanzar consultas simples. Importante consultar:
 
 * Modelo de datos: <https://firebase.google.com/docs/firestore/data-model?utm_source=studio>
 * Ejemplos insertar datos: <https://firebase.google.com/docs/firestore/manage-data/add-data?utm_source=studio>
