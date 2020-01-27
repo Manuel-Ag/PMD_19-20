@@ -13,7 +13,7 @@ parent: Unity
 
 ## `Update()` y `FixedUpdate()`:
 
-El primer paso es entender que hacen realmente estos dos métodos:
+Antes de nada hay que entender el uso de estos métodos:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u42aWzAIAqg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -54,7 +54,7 @@ El primer paso es entender que hacen realmente estos dos métodos:
 * `GetAxis("horizontal")` : Variable predefinida por el entorno que permite capturar el evento de las fechas del teclado izquierda y derecha.
 
 
-## salto
+## Salto
 
 ```csharp
     [SerializeField] float _fuerzaSalto = 5f;
@@ -105,7 +105,7 @@ private bool ComprobarSuelo1()
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oBVemjrWocI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-* Cálculo mediante un rayo en vertical. `Debug.DrawRay()` al pasarle los mismo valores que a `Physics2D.RayCast()` nos permite visualizar donde está el rayo.
+* Cálculo mediante un rayo vertical partiendo del centro del objeto. `Debug.DrawRay()` al pasarle los mismo valores que a `Physics2D.RayCast()` nos permite visualizar donde está el rayo.
 
 ```csharp
 private bool ComprobarSuelo2()
@@ -121,7 +121,7 @@ private bool ComprobarSuelo2()
 }
 ```
 
-* Cálculo mediante una caja. En vez de crear un rayo se crea una caja donde se desee. El método `BoxCast()` está definido en el script de GitHub y sirve para visualizar la caja.
+* Cálculo mediante una caja. En vez de crear un rayo se crea una caja donde se desee. El método `BoxCast()` está definido en el script de GitHub y sirve para visualizar el espacio ocupado.
 
 ```csharp
 private bool ComprobarSuelo3()
