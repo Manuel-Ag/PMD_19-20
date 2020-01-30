@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Canvas"
+date:   2020-01-26 14:30:00 +0200
+categories: unity
+order: 1
+parent: Unity
+---
+
+# Canvas
+
+A través del canvas de Unity podremos crear una interfaz de usuario.
