@@ -9,19 +9,21 @@ parent: Unity
 
 # Preparar el juego para ejecutarlo en Android
 
-Ahora que tenemos un juego con cierta funcionalidad, podemos probar a ejecutarlo en un dispositivo móvil.
+Ahora que tenemos un juego con cierta funcionalidad, se probará a ejecutarlo en un dispositivo móvil.
 
 ## Controles - Joystick
 
-No se dispone de teclado en un dispositivo móvil, por lo que se deberán añadir otro tipo de controles mejor adaptados a este entorno. Existen muchas soluciones gratuitas en la Unity Store. Se utilizará el siguiente:
+No se dispone de teclado en un dispositivo móvil, por lo que se deberán añadir otro tipo de controles mejor adaptados a este entorno. Existen multitud de recursos gratuitos en la Unity Store que permiten adaptar los controles a un dispositivo Android. Se utilizará el siguiente:
 
 {:refdef: style="text-align: center;"}
 ![Imagen]({{ site.baseurl }}/assets/img_post_android/captura3.png)
 {:refdef}
 
-En este paquete tenemos los prefabs de joysticks listos para utilizarse.
+* <https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631>
 
-A continuación, se crea un objeto de tipo UI > Canvas. Nos permitirá crear la interface de usuario. Con este objeto creado arrastra el prefab `Fixed Joystick` al canvas:
+En este paquete tenemos algunos prefabs listos para utilizarse.
+
+Primeramente, se crea un objeto de tipo *UI > Canvas*. Nos permitirá crear la interface de usuario. Con este objeto creado arrastra el prefab `Fixed Joystick` al canvas:
 
 {:refdef: style="text-align: center;"}
 ![Imagen]({{ site.baseurl }}/assets/img_post_android/captura4.png)
@@ -29,7 +31,7 @@ A continuación, se crea un objeto de tipo UI > Canvas. Nos permitirá crear la 
 
 No borres el nuevo objeto creado. Es necesario para capturar los eventos del canvas.
 
-Debemos acceder a ese nuevo elemento desde nuestro script del personaje. Desde el script capturaremos los valores:
+Debemos acceder a ese nuevo elemento desde nuestro script del **personaje**. Desde el script capturaremos los valores:
 
 ```csharp
 // Referencia al joystick
@@ -47,7 +49,7 @@ Observa como la variable es pública y de tipo `FixedJoystick`. Esto significa q
 
 ## Controles - Botón
 
-Añadir un botón requiere de menos pasos. Simplemente haciendo click derecho en el objeto canvas>UI>Button, se añade una acción y se hace referencia a un objeto con un script y se selecciona el método deseado de ese script.
+Añadir un botón requiere de menos pasos. Simplemente haciendo click derecho en el objeto *canvas > UI > Button*, se añade una acción y se hace referencia a un objeto con un script y se selecciona el método deseado de ese script.
 
 {:refdef: style="text-align: center;"}
 ![Imagen]({{ site.baseurl }}/assets/img_post_android/gif2.gif)
