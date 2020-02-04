@@ -70,8 +70,6 @@ public void Update()
 }
 ```
 
-Cada tipo de paŕametro tiene su método correspondiente:
-
-[Documentación](https://docs.unity3d.com/Manual/AnimationParameters.html){: .btn .btn-green }
+Cada tipo de paŕametro tiene su método correspondiente: [Animation Parameters](https://docs.unity3d.com/Manual/AnimationParameters.html){: .btn .btn-green }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hkaysu1Z-N8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
