@@ -60,11 +60,13 @@ Añadir un botón requiere de menos pasos. Simplemente haciendo click derecho en
 
 Unity es un motor multiplataforma, por lo que es posible exportar el juego a diferentes entornos en pocos pasos.
 
-* Abre la ventana File>Build Settings. Cambia la plataforma a Android. La opción estará disponible únicamente si en la instalación se activó la opción de Android SDK. Tardará unos minutos...
+* Abre la ventana *File > Build Settings*. Cambia la plataforma a Android. La opción estará disponible únicamente si en la instalación se activó la opción de Android SDK. Tardará unos minutos...
 
 {:refdef: style="text-align: center;"}
 ![Imagen]({{ site.baseurl }}/assets/img_post_android/captura5.png)
 {:refdef}
+
+Se puede apreciar como se ha añadido una escena por defecto. Es muy importante que añadas todas las escenas que utilizará el juego. El juego iniciará por la escena número 0.
 
 * En `Player Settings` se pueden configurar las opciones anteriormente conocidas de Android.
 
