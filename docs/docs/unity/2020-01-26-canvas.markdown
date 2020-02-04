@@ -20,3 +20,9 @@ A través del canvas de Unity podremos crear varios elementos para que interacci
 Se puede añadir cualquier elemento de la GUI simplemente haciendo click derecho en la jerarquía de objetos dentro del canvas:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-TobfKcKzhs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-GWjA6dixV4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Se recomienda utilizar `TextMeshPro` ya que mejora en mucho los elementos de la GUI por defecto de Unity.
+
+* <https://assetstore.unity.com/packages/essentials/beta-projects/textmesh-pro-84126>
