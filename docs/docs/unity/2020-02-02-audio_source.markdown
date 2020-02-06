@@ -51,3 +51,5 @@ Con esta configuración se podrá reproducir cualquier clip de audio como músic
 {:refdef: style="text-align: center;"}
 ![Imagen]({{ site.baseurl }}/assets/img_post_audio/captura2.png)
 {:refdef}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1BMJFgK68IU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
