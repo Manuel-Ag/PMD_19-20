@@ -163,3 +163,29 @@ public void danyo(string atacante)
 ```
 
 Pero hay un problema, la colisión se detecta por cada `frame`, por lo que en un mismo ataque nuestro personaje recibirá más ataques de los que debiera. Para esto podemos implementar corutinas que nos permiten añadir un *delay* en el código:
+
+```csharp
+// Coroutine que permite cambiar el valor de la variable cada hitDelay
+IEnumerator damagePause()
+{
+    // Este código se ejecutará durante varios frames hasta que pase el tiempo
+    yield return new WaitForSeconds(hitDelay);
+    // Ha pasado el tiempo definido, se ejecuta la siguiente línea
+    canDamage = true;
+}
+```
+
+Y modificamos el `OnTriggerEnter2D()` para utilizar la *coroutine*:
+
+```csharp
+private void OnTriggerEnter2D(Collider2D other)
+{
+    // Referencia al objeto jugador
+    Comprobar_suelo script_jugador = player.GetComponent<Comprobar_suelo>();
+    // Llamada al método de jugador
+    script_jugador.danyo("araña");
+    // Pausa entre daños en los ataques
+    canDamage = false;
+    damagePause();
+}
+```
