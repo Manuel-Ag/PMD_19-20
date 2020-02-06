@@ -7,7 +7,7 @@ order: 1
 parent: Unity
 ---
 
-[GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/Unity/Movimiento_salto){: .btn .btn-green }
+[Scripts](https://github.com/Manuel-Ag/PMD_19-20/tree/master/Unity/Movimiento_salto){: .btn .btn-blue }
 
 # Scripts movimiento y salto
 
