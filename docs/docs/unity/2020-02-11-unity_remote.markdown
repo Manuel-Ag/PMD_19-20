@@ -7,7 +7,7 @@ order: 1
 parent: Unity
 ---
 
-[Coroutines](https://docs.unity3d.com/Manual/UnityRemote5.html){: .btn .btn-green }[Script](https://github.com/Manuel-Ag/PMD_19-20/tree/master/Unity){: .btn .btn-blue }
+[Coroutines](https://docs.unity3d.com/Manual/UnityRemote5.html){: .btn .btn-green } [Script](https://github.com/Manuel-Ag/PMD_19-20/tree/master/Unity){: .btn .btn-blue }
 
 # Unity Remote
 
@@ -16,7 +16,9 @@ Unity Remote nos facilita el desarrollo para diferentes dispositivos, tales como
 ## Instalación
 
 1\. Instala en tu dispositivo móvil (el físico) la siguiente app: <https://play.google.com/store/apps/details?id=com.unity3d.genericremote&hl=es_419>
+
 2\. Comprueba que tu proyecto en Unity es un proyecto para Android: *File > Build Settings*
+
 3\. Comprueba que está seleccionada la opción `Any Android Device` en *Edit > Project Settings > Editor*:
 
 {:refdef: style="text-align: center;"}
@@ -24,7 +26,9 @@ Unity Remote nos facilita el desarrollo para diferentes dispositivos, tales como
 {:refdef}
 
 4\. Activa el modo depuración de tu Android en las opciones de desarrollador. Mantén la aplicación descargada abierta.
+
 5\. **Reinicia Unity**. A veces cuesta un poco que detecte el dispositivo, en ese caso reiniciando Unity se suele solucionar.
+
 6\. Ejecuta el juego desde Unity.
 
 ## Input del dispositivo
