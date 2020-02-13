@@ -46,6 +46,28 @@ Observa como la variable es pública y de tipo `FixedJoystick`. Esto significa q
 ![Imagen]({{ site.baseurl }}/assets/img_post_android/gif1.gif)
 {:refdef}
 
+## Opción B, otro Joystick
+
+* <https://assetstore.unity.com/packages/tools/input-management/mobile-touch-floating-joysticks-with-options-58759>
+
+Arrastra el prefab dentro de *Assets > Touch Controller Kit Lite > Prefabs > Joystick* a la escena. Se creará automáticamente el canvas.
+
+{:refdef: style="text-align: center;"}
+![Imagen]({{ site.baseurl }}/assets/img_post_android/captura6.png)
+{:refdef}
+
+```csharp
+// Variable global
+[SerializeField] private JoystickMovement joystick;
+
+void update()
+{
+  Debug.Log(joystick.HorizontalInput());
+  Debug.Log(joystick.VerticalInput());
+}
+```
+
+Simplemente arrastra el objeto Joystick hasta el campo público del script.
 
 ## Controles - Botón
 
