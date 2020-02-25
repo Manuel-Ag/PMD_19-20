@@ -7,7 +7,7 @@ order: 1
 parent: Segundo trimestre Android
 ---
 
-[GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/firebase){: .btn .btn-blue } [Documentación](https://firebase.google.com/docs/auth?hl=es){: .btn .btn-green }
+[GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/Firebase){: .btn .btn-blue } [Documentación](https://firebase.google.com/docs/auth?hl=es){: .btn .btn-green }
 
 # Firebase Authentication
 
@@ -60,7 +60,7 @@ A través de los métodos de `mAuth` podremos realizar todas las opciones.
                     }
                 });
     }
-    
+
 ```
 
 Cuando el usuario consiga autenticarse lanzaremos otra actividad.

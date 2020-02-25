@@ -7,7 +7,7 @@ order: 1
 parent: Segundo trimestre Android
 ---
 
-[GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/firebase){: .btn .btn-blue } [Documentación](https://firebase.google.com/docs/firestore/?hl=ES){: .btn .btn-green }
+[GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/Firebase){: .btn .btn-blue } [Documentación](https://firebase.google.com/docs/firestore/?hl=ES){: .btn .btn-green }
 
 # Firebase Firestore
 
