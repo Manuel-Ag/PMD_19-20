@@ -1,0 +1,68 @@
+---
+layout: post
+title:  "Callback"
+date:   2019-11-18 16:30:00 +0200
+categories: primer_trimestre
+order: 1
+parent: Primer trimestre Android
+---
+
+[GitHub](https://github.com/Manuel-Ag/PMD_19-20/tree/master/CallBack){: .btn .btn-blue }
+
+# Callback
+
+Una devolución de llamada o callback no es más que una función que se pasa como parámetro y se ejecuta dado el caso de forma asíncrona. Vamos a hacer un ejemplo tomando como base el BroadcastReceiver del tema anterior.
+
+## Recepción de SMS y callback
+
+En el tema anterior mediante un BroadcastReceiver se detectaba cuando el dispositivo recibía un SMS. Ahora vamos a hacer que comunique esta llegada a la actividad principal mediante un callback.
+
+Pasos a seguir:
+
+1\. Crear la interface en el BroadcastReceiver:
+
+```java
+public interface Respuesta {
+    //Los métodos en las interfaces solo están declarados
+    public void onRespuesta(String s);
+}
+```
+
+2\. En el método onReceive(), definir la variable *respuesta*:
+
+```java
+...
+respuesta = (Respuesta) context;
+respuesta.onRespuesta("Callback!!");
+...
+```
+
+3\. En la actividad principal, implementar la interface:
+
+```java
+public class MainActivity extends AppCompatActivity implements Receptor.Respuesta {
+  ...
+}
+```
+
+4\. En la actividad principal, definir el método:
+
+```java
+@Override
+public void onRespuesta(String s) {
+    textView.setText(s);
+}
+```
+
+Y con esto debería de comunicar el BroadcastReceiver cuando recibe un mensaje a una actividad, en este caso la actividad Main.
+
+**Nota:** Cuando registramos el BroadcastReceiver desde el código java tal que así:
+
+```java
+Receptor receptor = new Receptor();
+IntentFilter filter = new IntentFilter();
+filter.addAction("android.provider.Telephony.SMS_RECEIVED");
+this.registerReceiver(receptor, filter);
+```
+
+No es necesario volver a definirlo en el fichero manifiesto. Si se definen ambos se estarían registrando dos BroadcastReceiver provocando un malfuncionamiento.
