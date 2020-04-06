@@ -37,7 +37,7 @@ respuesta.onRespuesta("Callback!!");
 ...
 ```
 
-3\. En la actividad principal, implementar la interface:
+3\. En la actividad principal, definir la interface:
 
 ```java
 public class MainActivity extends AppCompatActivity implements Receptor.Respuesta {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements Receptor.Respuest
 }
 ```
 
-4\. En la actividad principal, definir el método:
+4\. En la actividad principal, implementar el método:
 
 ```java
 @Override
